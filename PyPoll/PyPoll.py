@@ -3,6 +3,8 @@ import csv as csv
 election_df = pd.read_csv(r"C:\Users\mitch\Desktop\Analytical BootCamp\HOMEWORK\HW3 - Python\election_data.csv")
 election_df.head()
 
+f = open("PyPoll.txt", "w")
+
 unique_cands = (election_df["Candidate"].unique())
 unique_cands 
 
@@ -53,9 +55,11 @@ elif winner == total_otooley:
     winner_name = "O'Tooley"
 winner_name
 
-print(f"Total Votes: {total_votes}")
-print(f"Correy: {perc_correy}% ({total_correy})")
-print(f"Khan: {perc_khan}% ({total_khan})")
-print(f"Li: {perc_li}% ({total_li})")
-print(f"O'Tooley: {perc_otooley}% ({total_otooley})")
-print(f"Winner: {winner_name}")
+print(f"Total Votes: {total_votes}", file=f)
+print(f"Correy: {perc_correy}% ({total_correy})", file=f)
+print(f"Khan: {perc_khan}% ({total_khan})", file=f)
+print(f"Li: {perc_li}% ({total_li})", file=f)
+print(f"O'Tooley: {perc_otooley}% ({total_otooley})", file=f)
+print(f"Winner: {winner_name}", file=f)
+
+f.close()
