@@ -55,6 +55,13 @@ elif winner == total_otooley:
     winner_name = "O'Tooley"
 winner_name
 
+print(f"Total Votes: {total_votes}")
+print(f"Correy: {perc_correy}% ({total_correy})")
+print(f"Khan: {perc_khan}% ({total_khan})")
+print(f"Li: {perc_li}% ({total_li})")
+print(f"O'Tooley: {perc_otooley}% ({total_otooley})")
+print(f"Winner: {winner_name}")
+
 print(f"Total Votes: {total_votes}", file=f)
 print(f"Correy: {perc_correy}% ({total_correy})", file=f)
 print(f"Khan: {perc_khan}% ({total_khan})", file=f)
